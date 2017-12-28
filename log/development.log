@@ -1,0 +1,717 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (107.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (75.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-19 12:40:50.867842"], ["updated_at", "2017-12-19 12:40:50.867842"]]
+  [1m[35m (78.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:04:42 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3681ms (Views: 3451.5ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:04:49 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:04:57 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:05:11 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:07:59 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:09:25 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 456ms (Views: 229.7ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:09:27 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:13:16 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to VoteOption (20171219134256)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219134256"]]
+  [1m[35m (55.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to Poll (20171219134309)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219134309"]]
+  [1m[35m (52.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:13:36 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:13:38 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:13:39 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:13:42 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 251ms (Views: 249.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:13:44 +0530
+Processing by PollsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'polls'):
+  
+app/controllers/polls_controller.rb:7:in `new'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (95.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219135312)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219135312"]]
+  [1m[35m (85.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVoteOptions (20171219135408)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVoteOptions (20171219135408)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219135312)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "polls"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20171219135312"]]
+  [1m[35m (71.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219135312)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219135312"]]
+  [1m[35m (76.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVoteOptions (20171219135408)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219135312)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "polls"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20171219135312"]]
+  [1m[35m (94.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (117.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (99.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219135312)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219135312"]]
+  [1m[35m (86.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVoteOptions (20171219135758)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVoteOptions (20171219135758)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219135312)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "polls"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20171219135312"]]
+  [1m[35m (69.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20171219140653)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219140653"]]
+  [1m[35m (65.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVoteOptions (20171219140929)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar, CONSTRAINT "fk_rails_3770997445"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219140929"]]
+  [1m[35m (102.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-19 14:09:47.591371"], ["updated_at", "2017-12-19 14:09:47.591371"]]
+  [1m[35m (30.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:39:57 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (4.5ms)
+  Rendered polls/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    1: <%= form_for @poll do |f| %>
+    2:   <%= render 'shared/errors', object: @poll %>
+    3: 
+    4:   <div class="form-group">
+    5:     <%= f.label :topic %>
+  
+app/views/polls/_form.html.erb:2:in `block in _app_views_polls__form_html_erb___1774436869176570134_27212940'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb___1774436869176570134_27212940'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__1567975637659139231_27566400'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:40:00 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    1: <%= form_for @poll do |f| %>
+    2:   <%= render 'shared/errors', object: @poll %>
+    3: 
+    4:   <div class="form-group">
+    5:     <%= f.label :topic %>
+  
+app/views/polls/_form.html.erb:2:in `block in _app_views_polls__form_html_erb___1774436869176570134_70011833424780'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb___1774436869176570134_70011833424780'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__1567975637659139231_70011833457940'
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:40:07 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 250ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:40:10 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    1: <%= form_for @poll do |f| %>
+    2:   <%= render 'shared/errors', object: @poll %>
+    3: 
+    4:   <div class="form-group">
+    5:     <%= f.label :topic %>
+  
+app/views/polls/_form.html.erb:2:in `block in _app_views_polls__form_html_erb___1774436869176570134_70011759043720'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb___1774436869176570134_70011759043720'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__1567975637659139231_70011759076800'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:46:19 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (126.4ms)
+  Rendered polls/new.html.erb within layouts/application (127.7ms)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Missing partial polls/_vote_option_fields, application/_vote_option_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    14:       <% end %>
+    15: 
+    16:       <div class="links">
+    17:         <%= link_to_add_association 'add option', f, :vote_options %>
+    18:       </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb___1774436869176570134_70011759448460'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb___1774436869176570134_70011759448460'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__1567975637659139231_70011758949100'
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:46:27 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 236ms (Views: 224.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:46:29 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (47.8ms)
+  Rendered polls/new.html.erb within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial polls/_vote_option_fields, application/_vote_option_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    14:       <% end %>
+    15: 
+    16:       <div class="links">
+    17:         <%= link_to_add_association 'add option', f, :vote_options %>
+    18:       </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb___2672351530580116227_70117455386360'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb___2672351530580116227_70117455386360'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__3233370020196411052_70117455337300'
+Started GET "/" for 127.0.0.1 at 2017-12-19 19:47:27 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:47:29 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered polls/_form.html.erb (8.8ms)
+  Rendered polls/new.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial polls/_vote_option_fields, application/_vote_option_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    14:       <% end %>
+    15: 
+    16:       <div class="links">
+    17:         <%= link_to_add_association 'add option', f, :vote_options %>
+    18:       </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb___2672351530580116227_70117535939920'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb___2672351530580116227_70117535939920'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__3233370020196411052_70117536054820'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:50:15 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered polls/_form.html.erb (40.5ms)
+  Rendered polls/new.html.erb within layouts/application (43.3ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial polls/_vote_option_fields, application/_vote_option_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    14:       <% end %>
+    15: 
+    16:       <div class="links">
+    17:         <%= link_to_add_association 'add option', f, :vote_options %>
+    18:       </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__2738440070363064638_36809180'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__2738440070363064638_36809180'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___897455453030440207_37093060'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:54:09 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (238.9ms)
+  Rendered polls/_form.html.erb (277.6ms)
+  Rendered polls/new.html.erb within layouts/application (279.4ms)
+Completed 500 Internal Server Error in 305ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007f729c77bcb0>:0x000000000309e888>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb___633803872185407906_70065115260460'
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__527161996276082109_25406140'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__527161996276082109_25406140'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___3480260408235933838_25512920'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:54:34 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (8.1ms)
+  Rendered polls/_form.html.erb (9.8ms)
+  Rendered polls/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for 18089260:Integer):
+    1: <% if object_id.errors.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb___633803872185407906_17500980'
+app/views/polls/_form.html.erb:2:in `block in _app_views_polls__form_html_erb__527161996276082109_17860200'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__527161996276082109_17860200'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___3480260408235933838_18107880'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:54:48 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (6.3ms)
+  Rendered polls/_form.html.erb (8.2ms)
+  Rendered polls/new.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error' for 70065117676420:Integer):
+    1: <% if object_id.error.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb___633803872185407906_70065116120560'
+app/views/polls/_form.html.erb:2:in `block in _app_views_polls__form_html_erb__527161996276082109_70065117521700'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__527161996276082109_70065117521700'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___3480260408235933838_70065117677680'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 19:55:00 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (245.9ms)
+  Rendered polls/_form.html.erb (255.2ms)
+  Rendered polls/new.html.erb within layouts/application (256.3ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007f729c77bcb0>:0x0000000002ba4468>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb___633803872185407906_18565700'
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__527161996276082109_22810060'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__527161996276082109_22810060'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___3480260408235933838_22884320'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:02:20 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (0.9ms)
+  Rendered polls/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:19: syntax error, unexpected '<', expecting ')'
+      </div>
+       ^
+/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:20: unknown regexp options - dv
+/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:21: syntax error, unexpected '<'
+  </div>
+   ^
+/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:21: unterminated regexp meets end of file):
+  
+app/views/polls/_form.html.erb:19: syntax error, unexpected '<', expecting ')'
+app/views/polls/_form.html.erb:20: unknown regexp options - dv
+app/views/polls/_form.html.erb:21: syntax error, unexpected '<'
+app/views/polls/_form.html.erb:21: unterminated regexp meets end of file
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___3480260408235933838_70065124076600'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:02:36 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.3ms)
+  Rendered polls/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:19: syntax error, unexpected '<', expecting ')'
+      </div>
+       ^
+/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:20: unknown regexp options - dv
+/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:21: syntax error, unexpected '<'
+  </div>
+   ^
+/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views/polls/_form.html.erb:21: unterminated regexp meets end of file):
+  
+app/views/polls/_form.html.erb:19: syntax error, unexpected '<', expecting ')'
+app/views/polls/_form.html.erb:20: unknown regexp options - dv
+app/views/polls/_form.html.erb:21: syntax error, unexpected '<'
+app/views/polls/_form.html.erb:21: unterminated regexp meets end of file
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___3480260408235933838_70065114736240'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:04:01 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered shared/_errors.html.erb (217.5ms)
+  Rendered polls/_form.html.erb (305.4ms)
+  Rendered polls/new.html.erb within layouts/application (307.3ms)
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007fb8288d6f20>:0x00007fb8288e7618>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb__1533968889512725782_70214466909500'
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__3470216055254990783_70214465674880'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3470216055254990783_70214465674880'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___4334910547578728894_70214465535620'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:04:04 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (230.8ms)
+  Rendered polls/_form.html.erb (235.1ms)
+  Rendered polls/new.html.erb within layouts/application (235.9ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007fb8288d6f20>:0x00007fb829804470>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb__1533968889512725782_70214472939020'
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__3470216055254990783_70214473475580'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3470216055254990783_70214473475580'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___4334910547578728894_70214473492280'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:05:28 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (242.5ms)
+  Rendered polls/_form.html.erb (246.2ms)
+  Rendered polls/new.html.erb within layouts/application (247.4ms)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007fb8288d6f20>:0x00007fb828c0d568>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:   <div class="alert alert-warning">
+    3:     <h4>The following errors were found:</h4>
+    4:     <ul>
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb__1533968889512725782_70214466898980'
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__3470216055254990783_70214467063400'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3470216055254990783_70214467063400'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___4334910547578728894_70214467219360'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:05:58 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered polls/_form.html.erb (4.6ms)
+  Rendered polls/new.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial polls/_vote_option_fields, application/_vote_option_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/atibhi/Desktop/Zense/Zense Polling/poller/app/views"
+):
+    14:       <% end %>
+    15: 
+    16:       <div class="links">
+    17:         <%= link_to_add_association 'add option', f, :vote_options%>
+    18:       </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__3470216055254990783_70214465749480'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3470216055254990783_70214465749480'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___4334910547578728894_70214465820360'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-19 20:06:57 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered polls/_form.html.erb (13.0ms)
+  Rendered polls/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `object' for nil:NilClass):
+    14:       <% end %>
+    15: 
+    16:       <div class="links">
+    17:         <%= link_to_add_association 'add option'%>
+    18:       </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/polls/_form.html.erb:17:in `block in _app_views_polls__form_html_erb__3470216055254990783_70214468157700'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3470216055254990783_70214468157700'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___4334910547578728894_70214467723940'

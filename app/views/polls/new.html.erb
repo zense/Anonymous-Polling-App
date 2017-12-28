@@ -1,3 +1,24 @@
 <% content_for(:page_header) {"Create a new poll"} %>
 
-<%= render 'form' %>
+<%= form_for @poll do |f| %>
+  <div class="form-group">
+    <%= f.label :topic %>
+    <%= f.text_area :topic, rows: 3, required: true, class: 'form-control' %>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Options</div>
+  </div>
+
+<div class="panel panel-default">
+  <%= f.fields_for :vote_options do |options_form| %>
+  <div class="nested-fields">
+    <div class="form-group">
+      <%= f.label :Option %>
+      <%= f.text_field :topic, class: 'form-control', required: true %>
+    </div>
+  <%= link_to_remove_association "Remove option", f %>
+  </div>
+  <% end %>
+</div>
+<%= f.submit 'Create', class: 'btn btn-primary btn-lg' %>
+<% end %>

@@ -1,1 +1,13 @@
 <% content_for(:page_header) {"Participate in our polls right now!"} %>
+<% @polls.each do |poll| %>
+  <div class="well">
+    <h2><%= poll.topic %></h2>
+
+    <div class="btn-group">
+      <%= link_to 'Edit', edit_poll_path(poll), class: 'btn btn-default' %>
+      <%= link_to 'Delete', poll_path(poll),
+                  method: :delete,
+                  class: 'btn btn-danger', data: {confirm: 'Are you sure?'} %>
+    </div>
+  </div>
+<% end %>

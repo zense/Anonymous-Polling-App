@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'jquery-turbolinks'
 gem 'cocoon', :git => 'git://github.com/nathanvda/cocoon.git'
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

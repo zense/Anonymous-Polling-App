@@ -3783,3 +3783,282 @@ Processing by PollsController#index as HTML
 Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.1ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171228174059)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171228174059"]]
+  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:24:10 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 301ms (Views: 263.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:24:14 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:24:15 +0530
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:24:23 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 58ms (Views: 50.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:24:25 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 63ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:25:09 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 58ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:25:12 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:25:12 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:25:21 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 91ms (Views: 84.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:25:23 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 75ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:25:24 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:25:25 +0530
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:26:51 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 294ms (Views: 252.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:26:54 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:26:54 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:15 +0530
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:30:15 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:15 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:15 +0530
+Processing by PollsController#index as HTML
+Processing by PollsController#new as HTML
+Processing by PollsController#index as HTML
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendering polls/index.html.erb within layouts/application
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (2.1ms)
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (0.9ms)
+  Rendered polls/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  Rendered polls/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/anonpoll/Anonymous-Polling-App/app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+  
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/anonpoll/Anonymous-Polling-App/app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/anonpoll/Anonymous-Polling-App/app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+  
+app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Completed 200 OK in 437ms (Views: 407.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:31 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/anonpoll/Anonymous-Polling-App/app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:33 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  Rendered polls/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/atibhi/Desktop/Zense/Zense Polling/anonpoll/Anonymous-Polling-App/app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/polls/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:46 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 313ms (Views: 306.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:30:49 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-28 23:30:50 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 174ms (Views: 67.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:30:55 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:30:56 +0530
+Started POST "/polls" for 127.0.0.1 at 2017-12-28 23:37:10 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ubtSMM9pdK+901AZi8Vv7/vPUGRx885L/xCF8muz/MJ1kc/z4Gf8KP41JBpYc6Vp9OYHgCmiLcH4p7bd8fAQMA==", "poll"=>{"topic"=>"Hi", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (30.4ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Hi"]]
+  [1m[35m (123.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 166ms (ActiveRecord: 154.4ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-28 23:37:10 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 82ms (Views: 75.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:37:14 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:37:14 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:40:58 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 90ms (Views: 84.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:41:01 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:41:02 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:41:08 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-28 23:41:08 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:45:58 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 313ms (Views: 299.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-28 23:46:01 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-28 23:46:01 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=241395a3060a7cfac835c87a794e3b92cb388b20a88435de&code=4/JYpKb9GdeWqlQ0E2ndpBwTn0i8Nfyt50VnlV4FJt7eY" for 127.0.0.1 at 2017-12-28 23:46:05 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"241395a3060a7cfac835c87a794e3b92cb388b20a88435de", "code"=>"4/JYpKb9GdeWqlQ0E2ndpBwTn0i8Nfyt50VnlV4FJt7eY", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "aa musiclover"], ["image_url", "https://lh4.googleusercontent.com/-EtNIM78F5_M/AAAAAAAAAAI/AAAAAAAAAjk/HEvriwxkV-Y/photo.jpg"], ["uid", "113743203650603460757"], ["created_at", "2017-12-28 18:16:07.885310"], ["updated_at", "2017-12-28 18:16:07.885310"]]
+  [1m[35m (55.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 63.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:46:07 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 78ms (Views: 74.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2017-12-28 23:47:56 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 23:47:56 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/6/edit" for 127.0.0.1 at 2017-12-28 23:47:59 +0530
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 6]]
+  Rendered polls/_form.html.erb (56.8ms)
+  Rendered polls/edit.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 98ms (Views: 89.2ms | ActiveRecord: 1.3ms)
+
+

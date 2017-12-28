@@ -42,6 +42,10 @@ class PollsController < ApplicationController
     redirect_to polls_path
   end
 
+  def show
+    @poll = Poll.find_by_id(params[:id])
+  end
+
   private
 
   def poll_params

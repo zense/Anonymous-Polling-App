@@ -5393,3 +5393,354 @@ Processing by PollsController#index as HTML
 Completed 200 OK in 61ms (Views: 53.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 19:29:23 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 246ms (Views: 230.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:29:26 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 51.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:29:34 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BJXHJnylGM3GOSaZDmYCKEbZ8/sxPLekBzbPYaNWgFlMldX2T/RxBAVpy1JNh4ZZttvTUK/KOzZYOo5akNX1Ng==", "poll"=>{"topic"=>"Fuck You", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Fuck You"]]
+  [1m[35m (109.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 118ms (ActiveRecord: 110.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 19:29:34 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (3.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 88ms (Views: 74.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 19:33:44 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (1.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:33:46 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:33:48 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:34:00 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 293ms (Views: 257.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:34:02 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 34.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:34:11 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:34:21 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:34:22 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:35:03 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (13.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 283ms (Views: 242.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:35:23 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 72.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:35:24 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:35:26 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 19:36:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 249ms (Views: 225.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:36:11 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (16.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 55.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:38:21 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered polls/_vote_option_fields.html.erb (3.0ms)
+  Rendered polls/_vote_option_fields.html.erb (0.8ms)
+  Rendered polls/_form.html.erb (19.0ms)
+  Rendered polls/new.html.erb within layouts/application (20.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 261ms (Views: 223.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:38:29 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YP3xB4b+yctf2b61Cya/PMfKj6bzeDNqlccKmaPvXojzFONCE6JJnRn0F9F6wiFbzW+Higkq9MfB1FaMDep+0A==", "poll"=>{"topic"=>"hi", "vote_options_attributes"=>{"0"=>{"title"=>"hello", "_destroy"=>"false"}}}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `titles' for #<VoteOption id: nil, poll_id: nil, title: "hello">
+Did you mean?  title
+               title?
+               title=):
+  
+app/controllers/polls_controller.rb:13:in `create'
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:39:25 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered polls/_vote_option_fields.html.erb (2.6ms)
+  Rendered polls/_vote_option_fields.html.erb (1.6ms)
+  Rendered polls/_form.html.erb (13.0ms)
+  Rendered polls/new.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:39:41 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nHaotIgQoFoqblWCMUWaYqniGbpjz1f3vQwaLaH2HQYPn7rxHUwgDGxD/OZAoQQFo0cRlpmdkFrpH0Y4D/M9Xg==", "poll"=>{"topic"=>"hi", "vote_options_attributes"=>{"0"=>{"title"=>"hi", "_destroy"=>"false"}}}, "commit"=>"Create"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `titles' for #<VoteOption id: nil, poll_id: nil, title: "hi">
+Did you mean?  title
+               title?
+               title=):
+  
+app/controllers/polls_controller.rb:13:in `create'
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:40:52 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nHaotIgQoFoqblWCMUWaYqniGbpjz1f3vQwaLaH2HQYPn7rxHUwgDGxD/OZAoQQFo0cRlpmdkFrpH0Y4D/M9Xg==", "poll"=>{"topic"=>"hi", "vote_options_attributes"=>{"0"=>{"title"=>"hi", "_destroy"=>"false"}}}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `titles' for #<VoteOption id: nil, poll_id: nil, title: "hi">
+Did you mean?  title
+               title?
+               title=):
+  
+app/controllers/polls_controller.rb:13:in `create'
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:43:00 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nHaotIgQoFoqblWCMUWaYqniGbpjz1f3vQwaLaH2HQYPn7rxHUwgDGxD/OZAoQQFo0cRlpmdkFrpH0Y4D/M9Xg==", "poll"=>{"topic"=>"hi", "vote_options_attributes"=>{"0"=>{"title"=>"hi", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Unpermitted parameter: :title
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "hi"]]
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 90ms (ActiveRecord: 70.8ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 19:43:00 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 84ms (Views: 76.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:43:03 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.0ms)
+  Rendered polls/_vote_option_fields.html.erb (2.3ms)
+  Rendered polls/_vote_option_fields.html.erb (1.4ms)
+  Rendered polls/_form.html.erb (25.1ms)
+  Rendered polls/new.html.erb within layouts/application (28.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 79.8ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:43:11 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y7WYuWq63dOoCuY21D6SFuw+7nW/0Lumx/FkNAV4CLWDtYppWeu0GmtaC/2X3xZnHDzO3iEmNzSY/SUPNvt92g==", "poll"=>{"topic"=>"Hi", "vote_options_attributes"=>{"0"=>{"title"=>"Hi", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Unpermitted parameter: :title
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Hi"]]
+  [1m[35m (174.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 190ms (ActiveRecord: 175.7ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 19:43:12 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 110ms (Views: 103.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 19:43:16 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.4ms)
+  Rendered polls/_vote_option_fields.html.erb (5.0ms)
+  Rendered polls/_vote_option_fields.html.erb (4.9ms)
+  Rendered polls/_form.html.erb (35.5ms)
+  Rendered polls/new.html.erb within layouts/application (42.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 106.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 19:43:26 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UDDIZOpvk5FVmRUKDxHtsRm8zIzucbnt2SSEUhA57rsYMNq02T76WJbJ+MFM8GnA6b7sJ3CHNX+GKMVpI7qb1A==", "poll"=>{"topic"=>"New Poll", "vote_options_attributes"=>{"0"=>{"title"=>"Good", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Unpermitted parameter: :title
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "New Poll"]]
+  [1m[35m (313.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 350ms (ActiveRecord: 316.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 19:43:26 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 93ms (Views: 86.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/polls/18/edit" for 127.0.0.1 at 2017-12-29 19:43:32 +0530
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (5.4ms)
+  [1m[36mVoteOption Load (0.9ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 18]]
+  Rendered polls/_vote_option_fields.html.erb (3.0ms)
+  Rendered polls/_form.html.erb (38.0ms)
+  Rendered polls/edit.html.erb within layouts/application (48.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 113.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/polls/18/edit" for 127.0.0.1 at 2017-12-29 19:43:34 +0530
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 18]]
+  Rendered polls/_vote_option_fields.html.erb (1.4ms)
+  Rendered polls/_form.html.erb (11.0ms)
+  Rendered polls/edit.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/polls/18/edit" for 127.0.0.1 at 2017-12-29 19:43:35 +0530
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.2ms)
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 18]]
+  Rendered polls/_vote_option_fields.html.erb (5.0ms)
+  Rendered polls/_form.html.erb (45.9ms)
+  Rendered polls/edit.html.erb within layouts/application (55.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 109.5ms | ActiveRecord: 1.0ms)
+
+

@@ -1,4 +1,6 @@
 class PollsController < ApplicationController
+
+  before_action :correct_user,       only: [:destroy,:edit]
   def index
     @polls = Poll.all
   end
@@ -16,6 +18,10 @@ class PollsController < ApplicationController
     else
       redirect_to new_poll_path
     end
+  end
+
+  def show
+    @poll = Poll.includes(:vote_options).find_by_id(params[:id])
   end
 
   def edit
@@ -47,6 +53,14 @@ class PollsController < ApplicationController
   end
 
   private
+
+  def correct_user
+    @poll=current_user.polls.find_by(id: params[:id])
+    if @poll.nil?
+      flash[:alert] = "Not your poll!"
+      redirect_back fallback_location: root_path
+    end
+  end
 
   def poll_params
     params.require(:poll).permit(:topic, vote_options_attributes: [:id, :title, :_destroy])

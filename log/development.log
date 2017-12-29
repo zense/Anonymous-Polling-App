@@ -4062,718 +4062,143 @@ Processing by PollsController#edit as HTML
 Completed 200 OK in 98ms (Views: 89.2ms | ActiveRecord: 1.3ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:02:53 +0530
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (19.1ms)
-Completed 200 OK in 1181ms (Views: 1156.7ms | ActiveRecord: 0.8ms)
-
-
-Started DELETE "/polls/6" for 127.0.0.1 at 2017-12-29 11:02:59 +0530
-Processing by PollsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"+y95/r5MII6byMH08Ed97skUD0wZH52t59eMDTBFvPEby2CRRluT117BnTd6ZXEuGkIxkT4sMB1bB3iicc3TMA==", "id"=>"6"}
-  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 6]]
-  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 6]]
-  [1m[35m (129.8ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 237ms (ActiveRecord: 132.0ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:03:00 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (2.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (8.7ms)
-Completed 200 OK in 106ms (Views: 98.5ms | ActiveRecord: 2.4ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:03:03 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (77.0ms)
-Completed 200 OK in 193ms (Views: 118.7ms | ActiveRecord: 1.6ms)
-
-
-Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-29 11:03:05 +0530
-  
-ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
-  
-actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-railties (5.1.4) lib/rails/engine.rb:522:in `call'
-puma (3.11.0) lib/puma/configuration.rb:225:in `call'
-puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.0) lib/puma/server.rb:438:in `process_client'
-puma (3.11.0) lib/puma/server.rb:302:in `block in run'
-puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:10:05 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (2.3ms)
-Completed 200 OK in 237ms (Views: 219.9ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-29 11:10:08 +0530
-  
-ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
-  
-actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-railties (5.1.4) lib/rails/engine.rb:522:in `call'
-puma (3.11.0) lib/puma/configuration.rb:225:in `call'
-puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.0) lib/puma/server.rb:438:in `process_client'
-puma (3.11.0) lib/puma/server.rb:302:in `block in run'
-puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-29 11:11:17 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
-  
-actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-railties (5.1.4) lib/rails/engine.rb:522:in `call'
-puma (3.11.0) lib/puma/configuration.rb:225:in `call'
-puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.0) lib/puma/server.rb:438:in `process_client'
-puma (3.11.0) lib/puma/server.rb:302:in `block in run'
-puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:11:21 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (4.9ms)
-Completed 200 OK in 289ms (Views: 264.2ms | ActiveRecord: 1.2ms)
-
-
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:11:24 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:11:24 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:13:15 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (2.5ms)
-Completed 200 OK in 210ms (Views: 192.1ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:13:18 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (10.1ms)
-Completed 200 OK in 85ms (Views: 57.3ms | ActiveRecord: 1.2ms)
-
-
-Started POST "/polls" for 127.0.0.1 at 2017-12-29 11:13:29 +0530
-Processing by PollsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vVjfPoeO9hghS/3FJItaLwRQwSjIfTV8r9TN/JaMFxC+YPy2psYPLdDjQsPCioXIqvBH9i+05OFyHenJT8AA7w==", "poll"=>{"topic"=>"Poll1", "_destroy"=>"false"}, "commit"=>"Create"}
-Unpermitted parameter: :_destroy
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Poll1"]]
-  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 87ms (ActiveRecord: 78.8ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:13:29 +0530
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:08:40 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (7.3ms)
-Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 4267ms (Views: 4239.0ms | ActiveRecord: 0.8ms)
 
 
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:13:35 +0530
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-12-29 00:08:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:09:23 +0530
 (google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:13:36 +0530
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:09:23 +0530
 (google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2/callback?state=279be551fb35c54ca27f7b2d5a317e7f67d45fd03c87d705&code=4/_TKbR8kVp9mfnxcqGw9mi52I8scFAsow584ecK567fI" for 127.0.0.1 at 2017-12-29 11:13:36 +0530
+Started GET "/auth/google_oauth2/callback?state=16c8f1ecac49f5612435961f98903825619a730194d5e0d4&code=4/p5XX0e1pxDtjPkDNVp_pnwjfoh9fZYZoiae7dTYiXX0" for 127.0.0.1 at 2017-12-29 00:09:27 +0530
 (google_oauth2) Callback phase initiated.
 Processing by SessionsController#create as HTML
-  Parameters: {"state"=>"279be551fb35c54ca27f7b2d5a317e7f67d45fd03c87d705", "code"=>"4/_TKbR8kVp9mfnxcqGw9mi52I8scFAsow584ecK567fI", "provider"=>"google_oauth2"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
-  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  Parameters: {"state"=>"16c8f1ecac49f5612435961f98903825619a730194d5e0d4", "code"=>"4/p5XX0e1pxDtjPkDNVp_pnwjfoh9fZYZoiae7dTYiXX0", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rishikesh Chaumal"], ["image_url", "https://lh3.googleusercontent.com/-CPiMlqaAV2Y/AAAAAAAAAAI/AAAAAAAAAD8/07IVgBuYwvk/photo.jpg"], ["uid", "100646473918286783962"], ["created_at", "2017-12-28 18:39:29.510155"], ["updated_at", "2017-12-28 18:39:29.510155"]]
+  [1m[35m (150.4ms)[0m  [1m[36mcommit transaction[0m
 Redirected to http://localhost:3000/
-Completed 302 Found in 64ms (ActiveRecord: 5.2ms)
+Completed 302 Found in 176ms (ActiveRecord: 153.5ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:13:38 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:09:29 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (1.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (9.9ms)
-Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 1.8ms)
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.4ms)
 
 
-Started GET "/polls/7" for 127.0.0.1 at 2017-12-29 11:13:41 +0530
-Processing by PollsController#show as HTML
-  Parameters: {"id"=>"7"}
-  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-Completed 406 Not Acceptable in 83ms (ActiveRecord: 0.8ms)
-
-
-  
-ActionController::UnknownFormat (PollsController#show is missing a template for this request format and variant.
-
-request.formats: ["text/html"]
-request.variant: []
-
-NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
-actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
-actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
-activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
-actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
-actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
-omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
-omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
-omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-railties (5.1.4) lib/rails/engine.rb:522:in `call'
-puma (3.11.0) lib/puma/configuration.rb:225:in `call'
-puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.0) lib/puma/server.rb:438:in `process_client'
-puma (3.11.0) lib/puma/server.rb:302:in `block in run'
-puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/polls/7" for 127.0.0.1 at 2017-12-29 11:14:47 +0530
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PollsController#show as HTML
-  Parameters: {"id"=>"7"}
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-Completed 406 Not Acceptable in 28ms (ActiveRecord: 0.7ms)
-
-
-  
-ActionController::UnknownFormat (PollsController#show is missing a template for this request format and variant.
-
-request.formats: ["text/html"]
-request.variant: []
-
-NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
-actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
-actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
-activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
-actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
-actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
-omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
-omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
-omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-railties (5.1.4) lib/rails/engine.rb:522:in `call'
-puma (3.11.0) lib/puma/configuration.rb:225:in `call'
-puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
-puma (3.11.0) lib/puma/server.rb:438:in `process_client'
-puma (3.11.0) lib/puma/server.rb:302:in `block in run'
-puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started DELETE "/polls/7" for 127.0.0.1 at 2017-12-29 11:14:55 +0530
-Processing by PollsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"goADAuAF/eRh4Ktvsd2kKqyNVuJh+AQH1RcrP6e3PkZM8iG6RpDe4qxb2oHTaW19LwFYZn4ck4w2Tsfm/F5S7Q==", "id"=>"7"}
-  [1m[36mPoll Load (2.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 7]]
-  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 7]]
-  [1m[35m (70.0ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 122ms (ActiveRecord: 74.4ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:14:56 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (5.2ms)
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 276ms (Views: 266.7ms | ActiveRecord: 1.7ms)
-
-
-Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 11:14:59 +0530
+Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 00:09:36 +0530
 Processing by SessionsController#destroy as HTML
 Redirected to http://localhost:3000/
 Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:14:59 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:09:36 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:13:32 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.1ms)
+  Rendered polls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.1ms)
 
 
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:15:01 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (32.2ms)
-Completed 200 OK in 153ms (Views: 84.6ms | ActiveRecord: 1.6ms)
-
-
-Started POST "/polls" for 127.0.0.1 at 2017-12-29 11:15:12 +0530
-Processing by PollsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ACz+FxewOb4eaRSwwKO+yUGtGDilQvMHOCesqgjnyUkDFN2fNvjAi+/Bq7YmomEu7w2e5kKLIprl7oif0avetg==", "poll"=>{"topic"=>"m", "_destroy"=>"false"}, "commit"=>"Create"}
-Unpermitted parameter: :_destroy
-  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "m"]]
-  [1m[35m (233.5ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 244ms (ActiveRecord: 234.3ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:15:12 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (1.0ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (7.9ms)
-Completed 200 OK in 94ms (Views: 87.5ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/polls/8/edit" for 127.0.0.1 at 2017-12-29 11:15:16 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"8"}
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (0.8ms)
-  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 8]]
-  Rendered polls/_form.html.erb (6.2ms)
-  Rendered polls/edit.html.erb within layouts/application (7.8ms)
-Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.6ms)
-
-
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:15:21 +0530
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:13:34 +0530
 (google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:15:23 +0530
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:13:34 +0530
 (google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2/callback?state=8e37f0185db8289039d2613566de8ba11512530f921a22c5&code=4/DHoxrHJmwC-FTSDmu-4QoPxA-0mqfhvsiixGMUR84Mk" for 127.0.0.1 at 2017-12-29 11:15:23 +0530
+Started GET "/auth/google_oauth2/callback?state=90b5cb18f3368e1b199e4c6ab4727ebbae2af525eaecc8d1&code=4/Aulz8Jith81heV78_HzBuwIRM5Qla-KciJ7u_f_DZVU" for 127.0.0.1 at 2017-12-29 00:13:34 +0530
 (google_oauth2) Callback phase initiated.
 Processing by SessionsController#create as HTML
-  Parameters: {"state"=>"8e37f0185db8289039d2613566de8ba11512530f921a22c5", "code"=>"4/DHoxrHJmwC-FTSDmu-4QoPxA-0mqfhvsiixGMUR84Mk", "provider"=>"google_oauth2"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
-  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  Parameters: {"state"=>"90b5cb18f3368e1b199e4c6ab4727ebbae2af525eaecc8d1", "code"=>"4/Aulz8Jith81heV78_HzBuwIRM5Qla-KciJ7u_f_DZVU", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
 Redirected to http://localhost:3000/
-Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:15:25 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (2.8ms)
-Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/polls/8/edit" for 127.0.0.1 at 2017-12-29 11:15:28 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"8"}
-  [1m[36mPoll Load (1.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.4ms)
-  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 8]]
-  Rendered polls/_form.html.erb (20.3ms)
-  Rendered polls/edit.html.erb within layouts/application (25.8ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 104ms (Views: 95.2ms | ActiveRecord: 1.8ms)
-
-
-Started PATCH "/polls/8" for 127.0.0.1 at 2017-12-29 11:15:34 +0530
-Processing by PollsController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBqz6tc//yUXNT5fRrksjqBuIgFpaxjM5AEbfXPY8KOVsLhgFskY9wJnQVTAEsiXXnoZPJtOge06GZYFqi4Cw==", "poll"=>{"topic"=>"kojhk"}, "commit"=>"Create", "id"=>"8"}
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "polls" SET "topic" = ? WHERE "polls"."id" = ?[0m  [["topic", "kojhk"], ["id", 8]]
-  [1m[35m (58.7ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 70ms (ActiveRecord: 61.0ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:15:34 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (4.5ms)
-Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:15:40 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (6.0ms)
-Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:15:42 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:15:43 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:32:39 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.1ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:32:59 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (1.8ms)
-Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.1ms)
-
-
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:33:02 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:33:03 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2/callback?state=93ddd399ac075995d08cf57f7098dbc93b56529df9267d0e&code=4%2FwvAmb2Rr1mFNYM-GM-eG09dt0H5hVoEDgRWVDYCPi74" for 127.0.0.1 at 2017-12-29 11:36:15 +0530
-(google_oauth2) Callback phase initiated.
-Processing by SessionsController#create as HTML
-  Parameters: {"state"=>"93ddd399ac075995d08cf57f7098dbc93b56529df9267d0e", "code"=>"4/wvAmb2Rr1mFNYM-GM-eG09dt0H5hVoEDgRWVDYCPi74", "provider"=>"google_oauth2"}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "105627814490218631634"], ["LIMIT", 1]]
-  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Vanita Agrawal"], ["image_url", "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"], ["uid", "105627814490218631634"], ["created_at", "2017-12-29 06:06:17.698977"], ["updated_at", "2017-12-29 06:06:17.698977"]]
-  [1m[35m (92.3ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 115ms (ActiveRecord: 94.2ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:36:17 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (9.2ms)
-Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 1.2ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:36:24 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (15.4ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 85ms (Views: 74.7ms | ActiveRecord: 0.1ms)
-
-
-Started POST "/polls" for 127.0.0.1 at 2017-12-29 11:36:34 +0530
-Processing by PollsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zBt6GhvadjXY3AH8NKVCe1DFesLtCAnYK8IUEze2dtUE/++/pRj5OKgfBPhDr2mbR24Gn77szQhwk3ppbT+h7A==", "poll"=>{"topic"=>"My Poll", "_destroy"=>"false"}, "commit"=>"Create"}
-Unpermitted parameter: :_destroy
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "My Poll"]]
-  [1m[35m (132.2ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 138ms (ActiveRecord: 133.2ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:36:34 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:13:36 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (2.2ms)
-Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+  Rendered polls/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
 
 
-Started GET "/polls/8/edit" for 127.0.0.1 at 2017-12-29 11:36:36 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"8"}
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.3ms)
-  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 8]]
-  Rendered polls/_form.html.erb (21.1ms)
-  Rendered polls/edit.html.erb within layouts/application (26.4ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 96ms (Views: 89.4ms | ActiveRecord: 1.0ms)
-
-
-Started DELETE "/polls/8" for 127.0.0.1 at 2017-12-29 11:36:44 +0530
-Processing by PollsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"mH1C+c9vnV2k3c1WUvZd8j8QHQrIyzx66Fow7OgM5tGfeya2OjecQf9rghM5LUetbvtYKC0S/UZL+gxjTF0ekQ==", "id"=>"8"}
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 8]]
-  [1m[35mSQL (2.8ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 8]]
-  [1m[35m (71.4ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 96ms (ActiveRecord: 75.4ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:36:44 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (2.5ms)
-Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:36:50 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (2.6ms)
-Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:37:01 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (13.4ms)
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 127ms (Views: 114.2ms | ActiveRecord: 0.2ms)
-
-
-Started POST "/polls" for 127.0.0.1 at 2017-12-29 11:37:10 +0530
-Processing by PollsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"INP/rJK5Kxm2wxpN6L4kRiQ/AxB97lCwTotXk8z8pfEj69wks/HSLEdrpUsOv/uhip+FzpongS2TQnOmFbCyDg==", "poll"=>{"topic"=>"Atibhi Poll", "_destroy"=>"false"}, "commit"=>"Create"}
-Unpermitted parameter: :_destroy
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Atibhi Poll"]]
-  [1m[35m (205.1ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 214ms (ActiveRecord: 206.9ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:37:10 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (8.5ms)
-Completed 200 OK in 58ms (Views: 50.8ms | ActiveRecord: 0.8ms)
-
-
-Started GET "/polls/9/edit" for 127.0.0.1 at 2017-12-29 11:37:13 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (0.8ms)
-  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 9]]
-  Rendered polls/_form.html.erb (7.4ms)
-  Rendered polls/edit.html.erb within layouts/application (9.1ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:37:29 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.9ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (14.9ms)
-Completed 200 OK in 92ms (Views: 85.0ms | ActiveRecord: 1.4ms)
-
-
-Started GET "/polls/10/edit" for 127.0.0.1 at 2017-12-29 11:37:35 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"10"}
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (1.7ms)
-  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 10]]
-  Rendered polls/_form.html.erb (15.6ms)
-  Rendered polls/edit.html.erb within layouts/application (19.9ms)
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 103ms (Views: 96.4ms | ActiveRecord: 0.9ms)
-
-
-Started GET "/polls/9/edit" for 127.0.0.1 at 2017-12-29 11:37:39 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.4ms)
-  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 9]]
-  Rendered polls/_form.html.erb (19.0ms)
-  Rendered polls/edit.html.erb within layouts/application (24.5ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 87ms (Views: 77.3ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/polls/9" for 127.0.0.1 at 2017-12-29 11:37:44 +0530
+Started GET "/polls/6" for 127.0.0.1 at 2017-12-29 00:13:44 +0530
 Processing by PollsController#show as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-Completed 406 Not Acceptable in 46ms (ActiveRecord: 0.4ms)
+  Parameters: {"id"=>"6"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 0.2ms)
 
 
   
@@ -4852,122 +4277,931 @@ puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.0) lib/puma/server.rb:438:in `process_client'
 puma (3.11.0) lib/puma/server.rb:302:in `block in run'
 puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:37:48 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (12.5ms)
-Completed 200 OK in 78ms (Views: 72.9ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVotes (20171228184450)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_votes_on_vote_option_id_and_user_id" ON "votes" ("vote_option_id", "user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVotes (20171228184450)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_votes_on_vote_option_id_and_user_id" ON "votes" ("vote_option_id", "user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (93.5ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (85.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (79.6ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "vote_options"[0m
+  [1m[35m (82.6ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar)[0m
+  [1m[35m (84.7ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35m (111.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (90.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171228174059)[0m
+  [1m[35m (88.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171219140929),
+(20171219140653);
 
+[0m
+  [1m[35m (94.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-28 18:48:29.767537"], ["updated_at", "2017-12-28 18:48:29.767537"]]
+  [1m[35m (71.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (102.1ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (105.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (112.9ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "vote_options"[0m
+  [1m[35m (106.2ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar)[0m
+  [1m[35m (98.5ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35m (96.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (64.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171228174059)[0m
+  [1m[35m (71.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171219140929),
+(20171219140653);
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:37:50 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (13.8ms)
-Completed 200 OK in 59ms (Views: 53.5ms | ActiveRecord: 1.2ms)
+[0m
+  [1m[35m (86.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-28 18:48:30.740684"], ["updated_at", "2017-12-28 18:48:30.740684"]]
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVotes (20171228184450)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_votes_on_vote_option_id_and_user_id" ON "votes" ("vote_option_id", "user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVotes (20171228184450)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vote_option_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c9b3bef597"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_12a4578fe1"
+FOREIGN KEY ("vote_option_id")
+  REFERENCES "vote_options" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_vote_option_id" ON "votes" ("vote_option_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171228184450"]]
+  [1m[35m (91.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (121.4ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (75.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (87.8ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "vote_options"[0m
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar)[0m
+  [1m[35m (100.2ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes"[0m
+  [1m[35m (96.1ms)[0m  [1m[35mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vote_option_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (94.0ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (99.9ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_vote_option_id" ON "votes" ("vote_option_id")[0m
+  [1m[35m (118.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (67.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171228184450)[0m
+  [1m[35m (76.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171219140929),
+(20171219140653),
+(20171228174059);
 
+[0m
+  [1m[35m (84.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-28 18:49:37.242355"], ["updated_at", "2017-12-28 18:49:37.242355"]]
+  [1m[35m (80.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (84.5ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (99.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (98.5ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "vote_options"[0m
+  [1m[35m (107.8ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar)[0m
+  [1m[35m (120.8ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes"[0m
+  [1m[35m (106.7ms)[0m  [1m[35mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vote_option_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (85.2ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (107.6ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_vote_option_id" ON "votes" ("vote_option_id")[0m
+  [1m[35m (96.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (66.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171228184450)[0m
+  [1m[35m (61.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171219140929),
+(20171219140653),
+(20171228174059);
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:37:51 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (7.8ms)
-Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 0.8ms)
-
-
-Started GET "/polls/9/edit" for 127.0.0.1 at 2017-12-29 11:38:46 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (0.9ms)
-  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 9]]
-  Rendered polls/_form.html.erb (9.1ms)
-  Rendered polls/edit.html.erb within layouts/application (11.8ms)
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 74ms (Views: 64.0ms | ActiveRecord: 1.3ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:38:49 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (6.6ms)
-Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:39:49 +0530
+[0m
+  [1m[35m (99.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-28 18:49:38.525758"], ["updated_at", "2017-12-28 18:49:38.525758"]]
+  [1m[35m (49.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:38:05 +0530
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.2ms)
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (16.1ms)
-Completed 200 OK in 206ms (Views: 194.4ms | ActiveRecord: 1.3ms)
+Completed 200 OK in 2703ms (Views: 2692.2ms | ActiveRecord: 0.8ms)
 
 
-Started GET "/polls/10/edit" for 127.0.0.1 at 2017-12-29 11:39:52 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"10"}
-  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.6ms)
-  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 10]]
-  Rendered polls/_form.html.erb (55.7ms)
-  Rendered polls/edit.html.erb within layouts/application (60.9ms)
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 107ms (Views: 90.5ms | ActiveRecord: 3.2ms)
-
-
-Started DELETE "/polls/10" for 127.0.0.1 at 2017-12-29 11:39:59 +0530
-Processing by PollsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"y6wvLmy1vAQUTamgDt2QGkP69AAFYa9rQB0TWjithg3Mqkthme29GE/75uVlBopFEhGxIuC4blfjvS/VnPx+TQ==", "id"=>"10"}
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:38:17 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:38:17 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=cfc1d9ae5102aa9b391b6da53b13212a36fb5c5634f82bbc&code=4/X4dHrCDORR6oEKlIR6b3VPekNgXCGwRCkWZtXqQ1Oeo" for 127.0.0.1 at 2017-12-29 00:38:18 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"cfc1d9ae5102aa9b391b6da53b13212a36fb5c5634f82bbc", "code"=>"4/X4dHrCDORR6oEKlIR6b3VPekNgXCGwRCkWZtXqQ1Oeo", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 10]]
-  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 10]]
-  [1m[35m (54.0ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 70ms (ActiveRecord: 54.9ms)
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rishikesh Chaumal"], ["image_url", "https://lh3.googleusercontent.com/-CPiMlqaAV2Y/AAAAAAAAAAI/AAAAAAAAAD8/07IVgBuYwvk/photo.jpg"], ["uid", "100646473918286783962"], ["created_at", "2017-12-28 19:08:19.403230"], ["updated_at", "2017-12-28 19:08:19.403230"]]
+  [1m[35m (91.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 94.4ms)
 
 
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:39:59 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:38:19 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (4.5ms)
-Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+  Rendered polls/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/polls/9" for 127.0.0.1 at 2017-12-29 11:40:35 +0530
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 00:38:22 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (70.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 173ms (Views: 108.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 00:38:43 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:38:48 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 00:38:51 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 50.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 00:38:59 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VkdcT8hVKDO4zh37pFJG70hRdhVWF57jk0A67g1hY8PLGGki/GJlrkRww2KHYxkedmAdoHqNkDCbExnvIQKGZw==", "poll"=>{"topic"=>"asdasd", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "asdasd"]]
+  [1m[35m (166.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 185ms (ActiveRecord: 171.5ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 00:38:59 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 79ms (Views: 72.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2017-12-29 00:39:02 +0530
 Processing by PollsController#show as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-Completed 406 Not Acceptable in 32ms (ActiveRecord: 0.4ms)
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" INNER JOIN "votes" ON "vote_options"."id" = "votes"."vote_option_id" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (105.9ms)
+  Rendered polls/show.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 140ms (Views: 136.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2017-12-29 00:39:05 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2017-12-29 00:39:16 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 00:40:04 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:40:04 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 00:40:26 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:40:29 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 00:40:29 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/" for 127.0.0.1 at 2017-12-29 01:34:27 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered polls/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 1768ms (Views: 1756.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 01:34:33 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 01:34:33 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=a8238b8fd7d4b3c05154a1990f08d5b35ecb17c4ba44ec91&code=4/UkNJi_jV-ty7eK24KVRxqCIZSLIwq7vHjOjqZi4JLsc" for 127.0.0.1 at 2017-12-29 01:34:33 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"a8238b8fd7d4b3c05154a1990f08d5b35ecb17c4ba44ec91", "code"=>"4/UkNJi_jV-ty7eK24KVRxqCIZSLIwq7vHjOjqZi4JLsc", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 01:34:35 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2017-12-29 01:34:38 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" INNER JOIN "votes" ON "vote_options"."id" = "votes"."vote_option_id" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (24.8ms)
+  Rendered polls/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2017-12-29 01:34:40 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:34:48 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (15.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 01:35:09 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4wLVvX9H3+wIAEHAmduidhvFpIGC9vqC8dnXjqHE3jDVDzMr4jaBTgHkaZjpd4AbyhkHGQ2zVT5vqn1Ld7dg5w==", "poll"=>{"topic"=>"asdqweqqqqqqqqqqqqqqqqqqqq", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "asdqweqqqqqqqqqqqqqqqqqqqq"]]
+  [1m[35m (178.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 189ms (ActiveRecord: 179.0ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 01:35:10 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  Rendered polls/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 63ms (Views: 56.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/polls/2" for 127.0.0.1 at 2017-12-29 01:35:13 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" INNER JOIN "votes" ON "vote_options"."id" = "votes"."vote_option_id" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (5.7ms)
+  Rendered polls/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 01:35:17 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  Rendered polls/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:35:21 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/2" for 127.0.0.1 at 2017-12-29 01:35:26 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" INNER JOIN "votes" ON "vote_options"."id" = "votes"."vote_option_id" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (23.6ms)
+  Rendered polls/show.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 98ms (Views: 86.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2017-12-29 01:35:29 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"2"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2017-12-29 01:35:33 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" INNER JOIN "votes" ON "vote_options"."id" = "votes"."vote_option_id" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (5.8ms)
+  Rendered polls/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:35:37 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:35:44 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:35:46 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:35:47 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 01:38:27 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 32.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 01:38:31 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  Rendered polls/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2017-12-29 01:38:33 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (26.6ms)
+  Rendered polls/show.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 88ms (Views: 75.8ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2017-12-29 01:38:35 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddVotesCountToVoteOptions (20171228200946)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddVotesCountToVoteOptions (20171228200946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "vote_options" ADD "votes_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171228200946"]]
+  [1m[35m (75.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+Started GET "/polls/1" for 127.0.0.1 at 2017-12-29 01:42:35 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (30.3ms)
+  Rendered polls/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 270ms (Views: 251.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 01:42:38 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  Rendered polls/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/polls/1" for 127.0.0.1 at 2017-12-29 01:42:43 +0530
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KRcgig/JObWNtpGvdkL72MFgHfGMpiaFlRXzxucfn/aaZg8G6Kf+6tSBBCeyzbVLxR8OrWw5tnEwNhmvGdSDJA==", "id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 1]]
+  [1m[35m (118.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 127ms (ActiveRecord: 118.8ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 01:42:43 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:37:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 1805ms (Views: 1791.6ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/polls/2" for 127.0.0.1 at 2017-12-29 13:37:15 +0530
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZkZmPH4gwry6BJPAWF1XUZVGziypJPJriVNV7r0kc8Q/EJ/aABOCM/HBBOk1WonFpDzZ5k/OCLXHYqIc0JdF7A==", "id"=>"2"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 2]]
+  [1m[35m (81.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 94ms (ActiveRecord: 82.4ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 13:37:15 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 13:37:17 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 45.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 13:37:22 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m+Oaxe4VqPQs/jNZDjn/pFEneXeVRFU3AHSpI0719XlGGA7QEdDzPf9n2C0VRHbXntRvtTQ+J+XAhL5b9LDtcA==", "poll"=>{"topic"=>"qweqweqw", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "qweqweqw"]]
+  [1m[35m (116.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 131ms (ActiveRecord: 118.3ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 13:37:22 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 107ms (Views: 101.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/polls/3" for 127.0.0.1 at 2017-12-29 13:37:28 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (13.4ms)
+  Rendered polls/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2017-12-29 13:37:29 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"3"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/3" for 127.0.0.1 at 2017-12-29 13:41:57 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
 
 
   
-ActionController::UnknownFormat (PollsController#show is missing a template for this request format and variant.
-
-request.formats: ["text/html"]
-request.variant: []
-
-NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+NoMethodError (undefined method `authenticate_user!' for #<PollsController:0x00000003e97048>
+Did you mean?  authenticate_with_http_digest):
   
-actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
-actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
-actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
-actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
-activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
 actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
 actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
 actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
@@ -5028,323 +5262,385 @@ puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.0) lib/puma/server.rb:438:in `process_client'
 puma (3.11.0) lib/puma/server.rb:302:in `block in run'
 puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 11:40:48 +0530
-Processing by SessionsController#destroy as HTML
-Redirected to http://localhost:3000/
-Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:42:00 +0530
+Processing by PollsController#index as HTML
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:40:48 +0530
+  
+NoMethodError (undefined method `authenticate_user!' for #<PollsController:0x000000039b2488>
+Did you mean?  authenticate_with_http_digest):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:42:20 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (3.7ms)
-Completed 200 OK in 43ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 1802ms (Views: 1797.6ms | ActiveRecord: 2.0ms)
 
 
-Started GET "/polls/9/edit" for 127.0.0.1 at 2017-12-29 11:40:50 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mPoll Load (0.9ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.4ms)
-  [1m[36mVoteOption Load (1.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 9]]
-  Rendered polls/_form.html.erb (21.5ms)
-  Rendered polls/edit.html.erb within layouts/application (25.6ms)
-Completed 200 OK in 88ms (Views: 78.7ms | ActiveRecord: 2.1ms)
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 13:42:28 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 40.2ms | ActiveRecord: 0.5ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:40:53 +0530
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 13:42:32 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uau+Op4SGVpkDORmzm1f5EPJr6GXdnG5r7CSjio9QLhkUCovYddCk7eVDxLVENaXjDq5YzYMA2tvQIX2kHhYsQ==", "poll"=>{"topic"=>"asdasd", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "asdasd"]]
+  [1m[35m (119.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 131ms (ActiveRecord: 119.8ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 13:42:33 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (9.5ms)
-Completed 200 OK in 93ms (Views: 89.1ms | ActiveRecord: 0.8ms)
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  Rendered polls/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 131ms (Views: 123.7ms | ActiveRecord: 2.2ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:40:53 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (4.8ms)
-Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.5ms)
-
-
-Started DELETE "/polls/9" for 127.0.0.1 at 2017-12-29 11:40:56 +0530
-Processing by PollsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"nm8HYSC1+BSCy/6Lk+bSX0q/vqp/CnLeobziCw9PMOaZaWMu1e35CNl9sc74PcgAG1T7iJrTs+ICHN6Eqx7Ipg==", "id"=>"9"}
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 9]]
-  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 9]]
-  [1m[35m (75.9ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 88ms (ActiveRecord: 76.8ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:40:56 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (5.7ms)
-Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.6ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:40:59 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (2.5ms)
-Completed 200 OK in 32ms (Views: 22.4ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:41:39 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (1.9ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:41:41 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (5.0ms)
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.2ms)
-
-
-Started POST "/polls" for 127.0.0.1 at 2017-12-29 11:41:48 +0530
-Processing by PollsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZcTAzlnOJNvwE6QImQVrBUoIgwvkka7sJpoSyvNibcVm/ONGeIbd7gG7Gw5/BLTi5KgF1QNYf3H7Uzb/Ki56Og==", "poll"=>{"topic"=>"Atibhi Poll", "_destroy"=>"false"}, "commit"=>"Create"}
-Unpermitted parameter: :_destroy
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Atibhi Poll"]]
-  [1m[35m (157.3ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 171ms (ActiveRecord: 158.1ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:41:48 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (10.3ms)
-Completed 200 OK in 83ms (Views: 77.1ms | ActiveRecord: 1.2ms)
-
-
-Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 11:41:51 +0530
-Processing by SessionsController#destroy as HTML
-Redirected to http://localhost:3000/
-Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:41:51 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (3.1ms)
-Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:41:58 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:41:58 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2/callback?state=8a9536f7e717d946b6fbe17c2e3079766ad96278a5d868bf&code=4/NS1OSh1FztvwBaHhk1NyeIe6DSVtFDiKxnKJks2UI10" for 127.0.0.1 at 2017-12-29 11:41:58 +0530
-(google_oauth2) Callback phase initiated.
-Processing by SessionsController#create as HTML
-  Parameters: {"state"=>"8a9536f7e717d946b6fbe17c2e3079766ad96278a5d868bf", "code"=>"4/NS1OSh1FztvwBaHhk1NyeIe6DSVtFDiKxnKJks2UI10", "provider"=>"google_oauth2"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:42:00 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (5.5ms)
-Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/polls/11/edit" for 127.0.0.1 at 2017-12-29 11:42:02 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"11"}
-  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.4ms)
-  [1m[36mVoteOption Load (0.6ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 11]]
-  Rendered polls/_form.html.erb (18.2ms)
-  Rendered polls/edit.html.erb within layouts/application (24.0ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 84ms (Views: 76.0ms | ActiveRecord: 1.1ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:42:05 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (1.7ms)
-Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.1ms)
-
-
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:42:08 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:42:09 +0530
-(google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2/callback?state=239a133fe0e1ca0de0770f85a9597698764078442b885166&code=4/f-SrNjzrSEu-UfQ1aS_YO7FfQbWfQEC75eRqKzXkzHc" for 127.0.0.1 at 2017-12-29 11:42:09 +0530
-(google_oauth2) Callback phase initiated.
-Processing by SessionsController#create as HTML
-  Parameters: {"state"=>"239a133fe0e1ca0de0770f85a9597698764078442b885166", "code"=>"4/f-SrNjzrSEu-UfQ1aS_YO7FfQbWfQEC75eRqKzXkzHc", "provider"=>"google_oauth2"}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "105627814490218631634"], ["LIMIT", 1]]
-  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:42:11 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (5.2ms)
-Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/polls/11/edit" for 127.0.0.1 at 2017-12-29 11:42:15 +0530
-Processing by PollsController#edit as HTML
-  Parameters: {"id"=>"11"}
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
-  Rendering polls/edit.html.erb within layouts/application
-  Rendered shared/_errors.html.erb (2.6ms)
-  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 11]]
-  Rendered polls/_form.html.erb (22.4ms)
-  Rendered polls/edit.html.erb within layouts/application (28.7ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 88ms (Views: 81.4ms | ActiveRecord: 1.1ms)
-
-
-Started DELETE "/polls/11" for 127.0.0.1 at 2017-12-29 11:42:31 +0530
-Processing by PollsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"EqQqSi1CHBeyGfr72Yg4Mp1YCnnJ1GdxBcAJAFt+N2UVok4F2BodC+mvtb6yUyJtzLNPWywNpk2mYDWP/y/PJQ==", "id"=>"11"}
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 11]]
-  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 11]]
-  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/polls
-Completed 302 Found in 90ms (ActiveRecord: 82.4ms)
-
-
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:42:31 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (4.2ms)
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:43:43 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:47:30 +0530
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (2.2ms)
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 241ms (Views: 229.3ms | ActiveRecord: 1.1ms)
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  Rendered polls/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 295ms (Views: 280.9ms | ActiveRecord: 2.0ms)
 
 
-Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 11:43:48 +0530
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 13:47:35 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/new.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 13:47:44 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RK/GUiflb5KatARMpTCd/7Z5ARUqTblld3edQZs6EhWZVFJH2CA0W0kt7zi+TRSMeYoX14s3y7e3h4o5IX8KHA==", "poll"=>{"topic"=>"sssssssssssssssssssssssssss", "_destroy"=>"false"}, "commit"=>"Create"}
+Unpermitted parameter: :_destroy
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "sssssssssssssssssssssssssss"]]
+  [1m[35m (269.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 277ms (ActiveRecord: 269.5ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 13:47:44 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.6ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  [1m[36mVoteOption Load (0.5ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 95ms (Views: 87.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 13:47:49 +0530
 Processing by SessionsController#destroy as HTML
 Redirected to http://localhost:3000/
-Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:43:48 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:47:49 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/polls/3" for 127.0.0.1 at 2017-12-29 13:47:54 +0530
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+4G1TQJuXbZdZ3A8qJp/j0C2QsZoQbeLxXZFwtFae6+i10yrfF0dORai5xXFnaEbccxVDI6rTVWLR7IwvOlNhw==", "id"=>"3"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `polls' for nil:NilClass):
+  
+app/controllers/polls_controller.rb:57:in `correct_user'
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:54:07 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/king_rocks/Documents/Other Stuff/ROR/apa/app/controllers/polls_controller.rb:69: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/polls_controller.rb:69: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-12-29 13:54:49 +0530
+Processing by PollsController#index as HTML
+Completed 500 Internal Server Error in 90ms
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<PollsController:0x0000000392d1e8>
+Did you mean?  authenticate_with_http_digest):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-29 15:03:32 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:03:39 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (4.2ms)
-Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 253ms (Views: 244.8ms | ActiveRecord: 1.2ms)
 
 
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:43:51 +0530
+Started DELETE "/polls/4" for 127.0.0.1 at 2017-12-29 15:03:45 +0530
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LZWExw8Sv+Dt7kIgKRBd/OLd9pNOys55kkEwgt1DFhZjnTOL6fjzVMMmjeIzG9wRWJElXOTQEr01++3DX15zIw==", "id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `polls' for nil:NilClass):
+  
+app/controllers/polls_controller.rb:58:in `correct_user'
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 15:03:50 +0530
 (google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 11:43:51 +0530
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2017-12-29 15:03:50 +0530
 (google_oauth2) Request phase initiated.
-Started GET "/auth/google_oauth2/callback?state=67a38f2457a2b499c67d1ed17fb53c9749427fe58d22997f&code=4/025jA_Xcebk67hN9SVp7vAX-084OSoCaSnkDLi7x4ks" for 127.0.0.1 at 2017-12-29 11:43:51 +0530
+Started GET "/auth/google_oauth2/callback?state=0349d4a889cd6a5db445a2a72586b3ee9a6838e81f8ee7e1&code=4/82ayGkMZJx0sXDRAgI1rKZi-ghpU38qbzG6CINkgdmU" for 127.0.0.1 at 2017-12-29 15:03:51 +0530
 (google_oauth2) Callback phase initiated.
 Processing by SessionsController#create as HTML
-  Parameters: {"state"=>"67a38f2457a2b499c67d1ed17fb53c9749427fe58d22997f", "code"=>"4/025jA_Xcebk67hN9SVp7vAX-084OSoCaSnkDLi7x4ks", "provider"=>"google_oauth2"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  Parameters: {"state"=>"0349d4a889cd6a5db445a2a72586b3ee9a6838e81f8ee7e1", "code"=>"4/82ayGkMZJx0sXDRAgI1rKZi-ghpU38qbzG6CINkgdmU", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
 Redirected to http://localhost:3000/
-Completed 302 Found in 13ms (ActiveRecord: 1.3ms)
+Completed 302 Found in 22ms (ActiveRecord: 1.2ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:43:53 +0530
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:03:53 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (1.7ms)
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.5ms)
 
 
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:43:54 +0530
+Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 15:03:54 +0530
 Processing by PollsController#new as HTML
   Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (9.1ms)
+  Rendered polls/new.html.erb within layouts/application (11.1ms)
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 123ms (Views: 33.9ms | ActiveRecord: 2.6ms)
+Completed 200 OK in 56ms (Views: 42.8ms | ActiveRecord: 0.4ms)
 
 
-Started POST "/polls" for 127.0.0.1 at 2017-12-29 11:44:06 +0530
+Started POST "/polls" for 127.0.0.1 at 2017-12-29 15:04:03 +0530
 Processing by PollsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ak7VaaudaVh7t5Erz1FfTSLNcQenMjGC4St61f97fscBdvbhitWQbYofLi0pUICqjG332UD74B884l7gJjdpOA==", "poll"=>{"topic"=>"Atibhi Poll", "_destroy"=>"false"}, "commit"=>"Create"}
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kRZf3t57VhzdX0STG5zMZpi4o6DpWtIrQ329QXVla3NsAqE4jbgKARgsOlbKGRrjmBMZFX8NIzEdifi01els+A==", "poll"=>{"topic"=>"wawakakaka", "_destroy"=>"false"}, "commit"=>"Create"}
 Unpermitted parameter: :_destroy
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "Atibhi Poll"]]
-  [1m[35m (173.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "wawakakaka"]]
+  [1m[35m (152.6ms)[0m  [1m[36mcommit transaction[0m
 Redirected to http://localhost:3000/polls
-Completed 302 Found in 180ms (ActiveRecord: 174.5ms)
+Completed 302 Found in 164ms (ActiveRecord: 152.9ms)
 
 
-Started GET "/polls" for 127.0.0.1 at 2017-12-29 11:44:06 +0530
+Started GET "/polls" for 127.0.0.1 at 2017-12-29 15:04:03 +0530
 Processing by PollsController#index as HTML
   Rendering polls/index.html.erb within layouts/application
   [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  Rendered polls/index.html.erb within layouts/application (3.1ms)
-Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/sign_out" for 127.0.0.1 at 2017-12-29 11:44:17 +0530
-Processing by SessionsController#destroy as HTML
-Redirected to http://localhost:3000/
-Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-12-29 11:44:17 +0530
-Processing by PollsController#index as HTML
-  Rendering polls/index.html.erb within layouts/application
-  [1m[36mPoll Load (0.5ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
-  Rendered polls/index.html.erb within layouts/application (4.7ms)
-Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/polls/new" for 127.0.0.1 at 2017-12-29 11:44:31 +0530
-Processing by PollsController#new as HTML
-  Rendering polls/new.html.erb within layouts/application
-  Rendered polls/new.html.erb within layouts/application (12.1ms)
-Completed 200 OK in 83ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 4]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 5]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 6]]
+  Rendered polls/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.6ms)
 
 

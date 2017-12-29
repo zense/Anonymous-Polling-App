@@ -22,7 +22,7 @@
         <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
         <li><%= link_to 'Logout', sign_out_path %></li>
       <% else %>
-        <li><%= link_to 'Sign in', '/auth/facebook' %></li>
+        <li><%= link_to 'Sign in', '/auth/google_oauth2' %></li>
       <% end %>
     </ul>
 

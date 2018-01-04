@@ -6025,3 +6025,1780 @@ Processing by PollsController#index as HTML
 Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-04 16:34:11 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 4385ms (Views: 4373.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2018-01-04 16:34:22 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered polls/_vote_option_fields.html.erb (4.0ms)
+  Rendered polls/_vote_option_fields.html.erb (1.8ms)
+  Rendered polls/_form.html.erb (106.9ms)
+  Rendered polls/new.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 221ms (Views: 140.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2018-01-04 16:34:44 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AL8YPrymGUVKvPDUa2W6qbeP0tfHWGWfuT7AEiYYlSAtPsaFn/OjAZlved5QM/bgCkdDBO7NKtMiQWUtBIZ2PA==", "poll"=>{"topic"=>"New Try", "vote_options_attributes"=>{"1515063864789"=>{"title"=>"tr2", "_destroy"=>"false"}, "1515063865590"=>{"title"=>"try3", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Unpermitted parameter: :title
+Unpermitted parameter: :title
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "New Try"]]
+  [1m[35m (134.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 161ms (ActiveRecord: 140.3ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-01-04 16:34:44 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.9ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 16:34:50 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 16:34:51 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=df121e83c599bcb8f6c8829a197f2a019a79374be9d3e5ca&code=4/IK5sQKB_OyKjP-LvSYwrrkOOOksJJ6mNYj35ShSoIOQ" for 127.0.0.1 at 2018-01-04 16:34:52 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"df121e83c599bcb8f6c8829a197f2a019a79374be9d3e5ca", "code"=>"4/IK5sQKB_OyKjP-LvSYwrrkOOOksJJ6mNYj35ShSoIOQ", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rishikesh Chaumal"], ["image_url", "https://lh3.googleusercontent.com/-CPiMlqaAV2Y/AAAAAAAAAAI/AAAAAAAAAD8/07IVgBuYwvk/photo.jpg"], ["uid", "100646473918286783962"], ["created_at", "2018-01-04 11:04:53.637570"], ["updated_at", "2018-01-04 11:04:53.637570"]]
+  [1m[35m (89.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 152ms (ActiveRecord: 95.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 16:34:53 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.7ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 124ms (Views: 116.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/polls/19" for 127.0.0.1 at 2018-01-04 16:35:05 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (PollsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-04 16:35:26 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2018-01-04 16:35:27 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 16:35:27 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVotes (20180104112232)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_votes_on_vote_option_id_and_user_id" ON "votes" ("vote_option_id", "user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVotes (20180104112232)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vote_option_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c9b3bef597"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_12a4578fe1"
+FOREIGN KEY ("vote_option_id")
+  REFERENCES "vote_options" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_vote_option_id" ON "votes" ("vote_option_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180104112232"]]
+  [1m[35m (125.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (146.3ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (128.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (155.6ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "vote_options"[0m
+  [1m[35m (147.3ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar)[0m
+  [1m[35m (117.6ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes"[0m
+  [1m[35m (136.0ms)[0m  [1m[35mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vote_option_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (136.9ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (151.4ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_vote_option_id" ON "votes" ("vote_option_id")[0m
+  [1m[35m (144.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (125.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180104112232)[0m
+  [1m[35m (127.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171219140929),
+(20171219140653),
+(20171228174059);
+
+[0m
+  [1m[35m (163.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-04 11:25:10.290561"], ["updated_at", "2018-01-04 11:25:10.290561"]]
+  [1m[35m (92.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (125.9ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic" text)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (144.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "uid" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (149.7ms)[0m  [1m[35mCREATE  INDEX "index_users_on_uid" ON "users" ("uid")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "vote_options"[0m
+  [1m[35m (143.1ms)[0m  [1m[35mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "poll_id" integer, "title" varchar)[0m
+  [1m[35m (150.0ms)[0m  [1m[35mCREATE  INDEX "index_vote_options_on_poll_id" ON "vote_options" ("poll_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes"[0m
+  [1m[35m (145.3ms)[0m  [1m[35mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vote_option_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (140.1ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_user_id" ON "votes" ("user_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (124.2ms)[0m  [1m[35mCREATE  INDEX "index_votes_on_vote_option_id" ON "votes" ("vote_option_id")[0m
+  [1m[35m (155.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (110.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180104112232)[0m
+  [1m[35m (120.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171219140929),
+(20171219140653),
+(20171228174059);
+
+[0m
+  [1m[35m (161.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-04 11:25:12.164033"], ["updated_at", "2018-01-04 11:25:12.164033"]]
+  [1m[35m (127.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-01-04 17:10:33 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2547ms (Views: 2533.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2018-01-04 17:10:37 +0530
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered polls/_vote_option_fields.html.erb (1.6ms)
+  Rendered polls/_vote_option_fields.html.erb (1.1ms)
+  Rendered polls/_form.html.erb (16.9ms)
+  Rendered polls/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 80ms (Views: 51.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2018-01-04 17:11:31 +0530
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eztVvdHnNqV3XdvYvpP4UEwGFFUHuz7i5yZOE+wB/JNWuosG8rKM4aSOUtKFxbQZ8c6Fhi4uca58Wesszp8fjw==", "poll"=>{"topic"=>"fav colour?", "vote_options_attributes"=>{"0"=>{"title"=>"red", "_destroy"=>"false"}, "1515066063968"=>{"title"=>"blue", "_destroy"=>"false"}, "1515066068472"=>{"title"=>"purple", "_destroy"=>"false"}, "1515066081764"=>{"title"=>"black", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Unpermitted parameter: :title
+Unpermitted parameter: :title
+Unpermitted parameter: :title
+Unpermitted parameter: :title
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "polls" ("topic") VALUES (?)[0m  [["topic", "fav colour?"]]
+  [1m[35m (938.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 948ms (ActiveRecord: 939.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2018-01-04 17:11:32 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered polls/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 17:11:36 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 17:11:36 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=860ac783532deb2bf2d32fb7483af1f427e71d645e0d69d4&code=4/8JKYfHaULb1akvRaGOO9PkU_RZp1DO93Gva3Lgi2OoA" for 127.0.0.1 at 2018-01-04 17:11:37 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"860ac783532deb2bf2d32fb7483af1f427e71d645e0d69d4", "code"=>"4/8JKYfHaULb1akvRaGOO9PkU_RZp1DO93Gva3Lgi2OoA", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rishikesh Chaumal"], ["image_url", "https://lh3.googleusercontent.com/-CPiMlqaAV2Y/AAAAAAAAAAI/AAAAAAAAAD8/07IVgBuYwvk/photo.jpg"], ["uid", "100646473918286783962"], ["created_at", "2018-01-04 11:41:38.524732"], ["updated_at", "2018-01-04 11:41:38.524732"]]
+  [1m[35m (143.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 203ms (ActiveRecord: 148.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 17:11:38 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:11:43 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (11.7ms)
+  Rendered polls/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2018-01-04 17:11:47 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:14:09 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (43.1ms)
+  Rendered polls/show.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 300ms (Views: 279.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:14:36 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial polls/__voting_form, application/__voting_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/king_rocks/Documents/Other Stuff/ROR/Anony-Pollin-App/Anonymous-Polling-App/app/views"
+):
+    2: 
+    3: <h2><%= @poll.topic %></h2>
+    4: 
+    5: <%= render '_voting_form' %>
+  
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___299852656643270424_14170980'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:14:42 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (5.2ms)
+  Rendered polls/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 17:20:19 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (33.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 283ms (Views: 269.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 17:20:33 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 17:20:34 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=548aac514ebd224e8164e53dfe0c97df979f696b93ef3263&code=4/FnPo9F1X5jG5Dc73cqoDimqWCZeNgA5MefPaqX2t3KA" for 127.0.0.1 at 2018-01-04 17:20:34 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"548aac514ebd224e8164e53dfe0c97df979f696b93ef3263", "code"=>"4/FnPo9F1X5jG5Dc73cqoDimqWCZeNgA5MefPaqX2t3KA", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 17:20:36 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:20:39 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (10.9ms)
+  Rendered polls/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:23:00 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (5.3ms)
+  Rendered polls/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:23:29 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (4.3ms)
+  Rendered polls/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:23:47 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (2.8ms)
+  Rendered polls/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:24:09 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (3.4ms)
+  Rendered polls/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:24:24 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (3.3ms)
+  Rendered polls/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:24:56 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (3.9ms)
+  Rendered polls/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:25:38 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (197.1ms)
+  Rendered polls/_voting_form.html.erb (198.4ms)
+  Rendered polls/show.html.erb within layouts/application (199.4ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000029772d0>:0x007f3dd6782d58>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2047437558888865288_69951783693280'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2047437558888865288_69951783693280'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__3794442680981643343_69951935131840'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__3794442680981643343_69951935131840'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb__4214358181305112401_69951783967640'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:26:29 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (253.7ms)
+  Rendered polls/_voting_form.html.erb (255.1ms)
+  Rendered polls/show.html.erb within layouts/application (256.1ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000029772d0>:0x00000002be3aa0>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag  option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2047437558888865288_22176540'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2047437558888865288_22176540'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__3794442680981643343_22533460'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__3794442680981643343_22533460'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb__4214358181305112401_23104980'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:26:36 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (193.3ms)
+  Rendered polls/_voting_form.html.erb (194.8ms)
+  Rendered polls/show.html.erb within layouts/application (195.8ms)
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000029772d0>:0x007f3de87e5400>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2047437558888865288_69951935084720'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2047437558888865288_69951935084720'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__3794442680981643343_69951934774960'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__3794442680981643343_69951934774960'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb__4214358181305112401_69951935164140'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:52:35 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (187.2ms)
+  Rendered polls/_voting_form.html.erb (188.5ms)
+  Rendered polls/show.html.erb within layouts/application (189.9ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000029772d0>:0x007f3de87b71b8>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2047437558888865288_69951783268680'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2047437558888865288_69951783268680'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__3794442680981643343_69951935025780'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__3794442680981643343_69951935025780'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb__4214358181305112401_69951935069860'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:52:41 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (186.5ms)
+  Rendered polls/_voting_form.html.erb (187.6ms)
+  Rendered polls/show.html.erb within layouts/application (188.5ms)
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000029772d0>:0x007f3de877f470>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2047437558888865288_69951934877340'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2047437558888865288_69951934877340'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__3794442680981643343_69951934910980'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__3794442680981643343_69951934910980'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb__4214358181305112401_69951934963740'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 17:58:26 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (205.3ms)
+  Rendered polls/_voting_form.html.erb (206.9ms)
+  Rendered polls/show.html.erb within layouts/application (207.9ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000029772d0>:0x007f3dd6719b28>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2047437558888865288_69951783436600'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2047437558888865288_69951783436600'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__3794442680981643343_69951783535600'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__3794442680981643343_69951783535600'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb__4214358181305112401_69951783753500'
+Started GET "/" for 127.0.0.1 at 2018-01-04 21:00:23 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered polls/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 1948ms (Views: 1935.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 21:00:27 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-01-04 21:00:28 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=34fe820233faf941a2cda47620fb09538947dd3cd728dab9&code=4/lJvtnrRqzNLJ2mbTowhVdSfJ673gJw4AL0fyWZ4bZC8" for 127.0.0.1 at 2018-01-04 21:00:29 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"34fe820233faf941a2cda47620fb09538947dd3cd728dab9", "code"=>"4/lJvtnrRqzNLJ2mbTowhVdSfJ673gJw4AL0fyWZ4bZC8", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "100646473918286783962"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 21:00:30 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:00:32 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (254.5ms)
+  Rendered polls/_voting_form.html.erb (255.8ms)
+  Rendered polls/show.html.erb within layouts/application (256.8ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x00000002f8c968>:0x007efef3ff2a78>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb__2128264117932603990_69816471826420'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb__2128264117932603990_69816471826420'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb__1365250580526721847_69816471801840'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb__1365250580526721847_69816471801840'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3657739343382184325_69816740190760'
+Started GET "/" for 127.0.0.1 at 2018-01-04 21:09:59 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered polls/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 271ms (Views: 256.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:10:03 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (241.1ms)
+  Rendered polls/_voting_form.html.erb (242.5ms)
+  Rendered polls/show.html.erb within layouts/application (243.5ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000026ff188>:0x00000003fd28b8>
+Did you mean?  url_options):
+    2:   <p>Options 2.5</p>
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:       <%= radio_button_tag 'vote_option[id]', option.id %>
+    6:     <% end %>
+    7: 
+    8:     <%= option.title %>
+  
+app/views/polls/_vote_option.html.erb:5:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_33071120'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_33071120'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_33227720'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_33227720'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_33481600'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:11:09 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.4ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (15.5ms)
+  Rendered polls/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 70ms (Views: 63.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:11:49 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (12.2ms)
+  Rendered polls/show.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `vote_option' for #<Poll id: 1, topic: "fav colour?">
+Did you mean?  vote_options
+               vote_options=):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4:   <%= render partial: 'polls/vote_option', collection: @poll.vote_option, as: :option %>
+    5: 
+    6:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+    7: <p>Options3</p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206055062720'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206055062720'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206054378480'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:11:57 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (4.1ms)
+  Rendered polls/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:13:28 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (207.1ms)
+  Rendered polls/show.html.erb within layouts/application (208.3ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000026ff188>:0x007fb43e715580>
+Did you mean?  url_options):
+     5:   <p>Options 2.5</p>
+     6:   <%= content_tag(:label) do %>
+     7:     <% unless current_user.voted_for?(@poll) %>
+     8:       <%= radio_button_tag 'vote_option[id]', option.id %>
+     9:     <% end %>
+    10: 
+    11:     <%= option.title %>
+  
+app/views/polls/_voting_form.html.erb:8:in `block (2 levels) in _app_views_polls__voting_form_html_erb___4095609743237008549_70206210654040'
+app/views/polls/_voting_form.html.erb:6:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206210654040'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206210654040'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206059229100'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:14:38 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (203.5ms)
+  Rendered polls/show.html.erb within layouts/application (204.5ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000026ff188>:0x007fb450826fe8>
+Did you mean?  url_options):
+     5:   <p>Options 2.5</p>
+     6:   <%= content_tag(:label) do %>
+     7:     <% unless current_user.voted_for?(@poll) %>
+     8:       <%= radio_button_tag 'vote_option[id]', option.id %>
+     9:     <% end %>
+    10: 
+    11:     <%= option.title %>
+  
+app/views/polls/_voting_form.html.erb:8:in `block (2 levels) in _app_views_polls__voting_form_html_erb___4095609743237008549_70206060163400'
+app/views/polls/_voting_form.html.erb:6:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206060163400'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206060163400'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206210784480'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:15:03 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (6.0ms)
+  Rendered polls/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Hash:0x007fb43e64e0c0>):
+     5:   <p>Options 2.5</p>
+     6:   <%= content_tag(:label) do %>
+     7:     <% unless current_user.voted_for?(@poll) %>
+     8:       <%= radio_button_tag 'vote_option[id]', url_options.id %>
+     9:     <% end %>
+    10: 
+    11:     <%= option.title %>
+  
+app/views/polls/_voting_form.html.erb:8:in `block (2 levels) in _app_views_polls__voting_form_html_erb___4095609743237008549_70206059708260'
+app/views/polls/_voting_form.html.erb:6:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206059708260'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206059708260'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206059096300'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:16:16 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (204.2ms)
+  Rendered polls/show.html.erb within layouts/application (205.6ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000026ff188>:0x0000000285ed80>
+Did you mean?  url_options):
+     5:   <p>Options 2.5</p>
+     6:   <%= content_tag(:label) do %>
+     7:     <% unless current_user.voted_for?(@poll) %>
+     8:       <%= radio_button_tag 'vote_option[id]', option.poll_id %>
+     9:     <% end %>
+    10: 
+    11:     <%= option.title %>
+  
+app/views/polls/_voting_form.html.erb:8:in `block (2 levels) in _app_views_polls__voting_form_html_erb___4095609743237008549_20955560'
+app/views/polls/_voting_form.html.erb:6:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_20955560'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_20955560'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_21173800'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:16:19 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (220.7ms)
+  Rendered polls/show.html.erb within layouts/application (221.8ms)
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000026ff188>:0x000000025b8720>
+Did you mean?  url_options):
+     5:   <p>Options 2.5</p>
+     6:   <%= content_tag(:label) do %>
+     7:     <% unless current_user.voted_for?(@poll) %>
+     8:       <%= radio_button_tag 'vote_option[id]', option.poll_id %>
+     9:     <% end %>
+    10: 
+    11:     <%= option.title %>
+  
+app/views/polls/_voting_form.html.erb:8:in `block (2 levels) in _app_views_polls__voting_form_html_erb___4095609743237008549_19553780'
+app/views/polls/_voting_form.html.erb:6:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_19553780'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_19553780'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_19780660'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:18:52 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (4.2ms)
+  Rendered polls/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2018-01-04 21:18:55 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:20:14 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (4.0ms)
+  Rendered polls/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:20:56 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (201.5ms)
+  Rendered polls/show.html.erb within layouts/application (202.6ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x000000026ff188>:0x000000036cc840>
+Did you mean?  url_options):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= option.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_28483740'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_28483740'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_28736400'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:21:10 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (225.4ms)
+  Rendered polls/show.html.erb within layouts/application (226.6ms)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `url_option' for #<#<Class:0x000000026ff188>:0x0000000272cea8>
+Did you mean?  url_options):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= url_option.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_20263400'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_20263400'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_20559980'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:21:20 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (3.0ms)
+  Rendered polls/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Hash:0x007fb43e628938>):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= url_options.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70205911948300'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70205911948300'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206210573740'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:21:31 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (3.2ms)
+  Rendered polls/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `titles' for #<Hash:0x007fb441ac3710>):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= url_options.titles %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206084573220'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206084573220'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206084654780'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:25:35 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (184.8ms)
+  Rendered polls/show.html.erb within layouts/application (185.9ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `poll' for #<#<Class:0x007fb43a6d7f18>:0x007fb43a6d6258>
+Did you mean?  @poll):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= poll.titles %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206024800820'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206024800820'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_33884960'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:25:37 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (212.2ms)
+  Rendered polls/show.html.erb within layouts/application (213.4ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `poll' for #<#<Class:0x007fb43a6d7f18>:0x007fb42ca9df20>
+Did you mean?  @poll):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= poll.titles %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70205918366500'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70205918366500'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70205910086780'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:13 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (6.0ms)
+  Rendered polls/show.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `titles' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.titles %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70205912197140'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70205912197140'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70205916967460'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:29 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (6.3ms)
+  Rendered polls/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_30818500'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_30818500'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_31921400'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:32 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (4.3ms)
+  Rendered polls/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206087496640'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206087496640'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206084951320'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:33 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (4.8ms)
+  Rendered polls/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206092087160'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206092087160'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206092147060'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:33 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (5.5ms)
+  Rendered polls/show.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206045846440'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206045846440'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206045992320'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:34 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (4.7ms)
+  Rendered polls/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206064528040'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206064528040'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206064464880'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:34 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/_voting_form.html.erb (5.7ms)
+  Rendered polls/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Poll id: 1, topic: "fav colour?">):
+    1: <%= form_tag votes_path, method: :post, remote: true, id: 'voting_form' do %>
+    2:   <%= hidden_field_tag 'poll[id]', @poll.id %>
+    3: <p>Options2</p>
+    4: <%= @poll.title %>
+    5:   <%= render partial: 'polls/vote_option', collection: @poll.vote_options, as: :option %>
+    6: 
+    7:   <p><b>Total votes: <%= @poll.votes_summary %></b></p>
+  
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206011136120'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206011136120'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70205919126020'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:26:44 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (24.3ms)
+  Rendered polls/show.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:27:14 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (6.0ms)
+  Rendered polls/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:27:36 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (3.8ms)
+  Rendered polls/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:29:54 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  Rendered collection of polls/_vote_option.html.erb [0 times] (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_voting_form.html.erb (3.7ms)
+  Rendered polls/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/votes" for 127.0.0.1 at 2018-01-04 21:29:58 +0530
+Processing by VotesController#create as JS
+  Parameters: {"utf8"=>"✓", "poll"=>{"id"=>"1"}, "commit"=>"Vote"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:30:39 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (219.2ms)
+  Rendered polls/_voting_form.html.erb (220.5ms)
+  Rendered polls/show.html.erb within layouts/application (221.5ms)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x007fb43a6d7f18>:0x007fb42211f9d0>
+Did you mean?  url_options):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= option.title %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206075361320'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206075361320'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70205821138880'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70205821138880'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206064558560'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:00 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.4ms)
+  Rendered polls/_voting_form.html.erb (5.0ms)
+  Rendered polls/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.title %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206095073580'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206095073580'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206017700680'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206017700680'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206025004560'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:02 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (4.3ms)
+  Rendered polls/_voting_form.html.erb (6.0ms)
+  Rendered polls/show.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.title %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_33907060'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_33907060'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_31833940'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_31833940'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206044025440'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:03 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.8ms)
+  Rendered polls/_voting_form.html.erb (5.3ms)
+  Rendered polls/show.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.title %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206008140020'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206008140020'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206012751880'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206012751880'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206073121180'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:03 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.2ms)
+  Rendered polls/_voting_form.html.erb (4.6ms)
+  Rendered polls/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.title %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206049010920'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206049010920'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206049182140'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206049182140'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206049345060'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:03 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.5ms)
+  Rendered polls/_voting_form.html.erb (4.9ms)
+  Rendered polls/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.title %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206021897620'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206021897620'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206094994860'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206094994860'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70205916280880'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:17 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.0ms)
+  Rendered polls/_voting_form.html.erb (4.2ms)
+  Rendered polls/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.id %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206007209320'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206007209320'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206027477540'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206027477540'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206024647580'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:24 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.6ms)
+  Rendered polls/_voting_form.html.erb (4.9ms)
+  Rendered polls/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `titles' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @option.titles %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_27801200'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_27801200'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_27983040'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_27983040'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_28355060'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:37 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (3.4ms)
+  Rendered polls/_voting_form.html.erb (4.7ms)
+  Rendered polls/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `titles' for nil:NilClass):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= @sahkdgfask.titles %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206084473820'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206084473820'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206091789160'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206091789160'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206061227380'
+Started GET "/polls/1" for 127.0.0.1 at 2018-01-04 21:31:46 +0530
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered polls/_vote_option.html.erb (214.2ms)
+  Rendered polls/_voting_form.html.erb (216.0ms)
+  Rendered polls/show.html.erb within layouts/application (217.1ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `option' for #<#<Class:0x007fb43a6d7f18>:0x007fb43e0132f0>
+Did you mean?  url_options):
+    3:   <%= content_tag(:label) do %>
+    4:     <% unless current_user.voted_for?(@poll) %>
+    5:     <% end %>
+    6:     <%= option.titles %>
+    7:   <% end %>
+    8:   <%= visualize_votes_for option %>
+    9: </div>
+  
+app/views/polls/_vote_option.html.erb:6:in `block in _app_views_polls__vote_option_html_erb___95944148638096545_70206055241140'
+app/views/polls/_vote_option.html.erb:3:in `_app_views_polls__vote_option_html_erb___95944148638096545_70206055241140'
+app/views/polls/_voting_form.html.erb:4:in `block in _app_views_polls__voting_form_html_erb___4095609743237008549_70206055389640'
+app/views/polls/_voting_form.html.erb:1:in `_app_views_polls__voting_form_html_erb___4095609743237008549_70206055389640'
+app/views/polls/show.html.erb:5:in `_app_views_polls_show_html_erb___3822523307836028183_70206055572900'

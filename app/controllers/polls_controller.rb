@@ -8,6 +8,10 @@ class PollsController < ApplicationController
     @poll.vote_options.build
   end
 
+  def show
+  @poll = Poll.includes(:vote_options).find_by_id(params[:id])
+  end
+
   def create
     @poll = Poll.new(poll_params)
     if @poll.save

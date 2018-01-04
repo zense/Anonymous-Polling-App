@@ -1,0 +1,9 @@
+<div class="form-group">
+  <p>Options 2.5</p>
+  <%= content_tag(:label) do %>
+    <% unless current_user.voted_for?(@poll) %>
+    <% end %>
+    <%= option.titles %>
+  <% end %>
+  <%= visualize_votes_for option %>
+</div>

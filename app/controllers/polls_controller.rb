@@ -58,6 +58,7 @@ class PollsController < ApplicationController
     # .to_i converts values to integers here because params[:id] is a string
     # Without this current_user.id and params[:id] would never match
     if current_user.id != params[:id].to_i
+      flash[:warning] = 'You can only edit and delete polls created by you !'
       redirect_to polls_path
     end
   end

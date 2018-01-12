@@ -12,7 +12,6 @@
                     method: :delete,
                     class: 'btn btn-danger', data: {confirm: 'Are you sure?'} %>
       </div>
-
       <% else %>
         Please sign in via <%= link_to 'Google', '/auth/google_oauth2' %> to participate in this poll.
       <% end %>

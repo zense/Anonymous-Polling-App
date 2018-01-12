@@ -1,4 +1,6 @@
 class PollsController < ApplicationController
+  before_action :correct_user, only: [:edit, :destroy]
+
   def index
     @polls = Poll.all
   end
@@ -51,6 +53,14 @@ class PollsController < ApplicationController
   end
 
   private
+
+  def correct_user
+    # .to_i converts values to integers here because params[:id] is a string
+    # Without this current_user.id and params[:id] would never match
+    if current_user.id != params[:id].to_i
+      redirect_to polls_path
+    end
+  end
 
   def poll_params
     params.require(:poll).permit(:topic, vote_options_attributes: [:id, :title, :_destroy])

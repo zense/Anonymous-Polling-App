@@ -14,9 +14,20 @@
     <div class="navbar-header">
       <%= link_to 'Poller', root_path, class: 'navbar-brand' %>
     </div>
+    <% if current_user %>
     <ul class="nav navbar-nav">
       <li><%= link_to 'Add poll', new_poll_path %></li>
     </ul>
+    <% end %>
+    <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
+        <li><%= image_tag current_user.image_url, :size => "70x60", alt: current_user.name %></li>
+        <li><%= link_to 'Logout', sign_out_path %></li>
+      <% else %>
+        <li><%= link_to 'Sign in', '/auth/google_oauth2' %></li>
+      <% end %>
+    </ul>
+
   </div>
 </div>
 

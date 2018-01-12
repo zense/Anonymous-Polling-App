@@ -3,18 +3,17 @@
 
   <div class="form-group">
     <%= f.label :topic %>
-    <%= f.text_area :topic, rows: 3, required: true, class: 'form-control' %>
+    <%= f.text_field :topic, class: 'form-control', required: true %>
   </div>
 
   <div class="panel panel-default">
     <div class="panel-heading">Options</div>
-    <div class="panel-body">
+    <div class="panel-body" id="vote_options">
       <%= f.fields_for :vote_options do |options_form| %>
-        <%= render 'vote_option_fields', f: options_form %>
+          <%= render 'vote_option_fields', f: options_form %>
       <% end %>
-
       <div class="links">
-        <%= link_to_add_association 'add option', f, :vote_options%>
+        <%= link_to_add_association 'add options', f, :vote_options%>
       </div>
     </div>
   </div>

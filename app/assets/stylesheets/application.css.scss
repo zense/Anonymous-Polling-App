@@ -13,13 +13,24 @@
  *= require_tree .
  *= require_self
  */
- @import 'bootstrap';
- @import 'bootstrap/theme';
  .well {
    h2 {
      margin-top: 0;
+     color: black;
    }
  }
  .progress {
   background-image: linear-gradient(to bottom, #bbb 0%, #ccc 100%)
 }
+ $navbar-default-bg: white;
+ $navbar-default-link-color: black;
+ $text-color: black;
+ $well-bg: lightgrey;
+ $body-bg: slateblue;
+ $link-color: black;
+ $input-bg: black;
+ $input-color: white;
+ $btn-default-bg: black;
+ $btn-default-color: white;
+ @import 'bootstrap';
+ @import 'bootstrap/theme';

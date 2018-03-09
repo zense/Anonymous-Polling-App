@@ -12380,3 +12380,160 @@ Processing by PollsController#index as HTML
 Completed 200 OK in 1394ms (Views: 1391.0ms | ActiveRecord: 1.6ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vote_options_on_poll_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_vote_option_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-03-09 07:22:29 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 2]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 3]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 2004ms (Views: 1976.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-09 07:22:34 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-09 07:22:35 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=b3e5565bd6fc6d2a426710a16422ffdad6a6728d6bd4d638&code=4/AACd6fU5NEusUK6oVwi2lZi69ZtjFDPJTOjBtkmyvAOqleNen_FL7m2WhiEtb-cmGcE3NHvY3qZXXT7IIvqFoy8" for 127.0.0.1 at 2018-03-09 07:22:35 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"b3e5565bd6fc6d2a426710a16422ffdad6a6728d6bd4d638", "code"=>"4/AACd6fU5NEusUK6oVwi2lZi69ZtjFDPJTOjBtkmyvAOqleNen_FL7m2WhiEtb-cmGcE3NHvY3qZXXT7IIvqFoy8", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-09 07:22:37 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 3]]
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-09 07:23:30 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.8ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.6ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.4ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 3]]
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 93ms (Views: 83.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2018-03-09 07:23:32 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-09 07:23:32 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.2ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 2]]
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 3]]
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-09 07:23:33 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-09 07:23:34 +0530
+(google_oauth2) Request phase initiated.
+Started GET "/auth/google_oauth2/callback?state=96ab549c6bc4a24ae87a39a667c34815a501c966f0790b80&code=4/AAB1hY1R54sDdWjBYGcC_kze57F0VozX2QoX-BNxoSTAtwMJIKekQkV62Bd4dmtHPwfFb7A41tE4gwNT-6ZyYUE" for 127.0.0.1 at 2018-03-09 07:23:34 +0530
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"96ab549c6bc4a24ae87a39a667c34815a501c966f0790b80", "code"=>"4/AAB1hY1R54sDdWjBYGcC_kze57F0VozX2QoX-BNxoSTAtwMJIKekQkV62Bd4dmtHPwfFb7A41tE4gwNT-6ZyYUE", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "113743203650603460757"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-09 07:23:36 +0530
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVoteOption Load (0.3ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 3]]
+  [1m[36mVoteOption Load (0.1ms)[0m  [1m[34mSELECT "vote_options".* FROM "vote_options" WHERE "vote_options"."poll_id" = ?[0m  [["poll_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."vote_option_id" = ?[0m  [["vote_option_id", 5]]
+  Rendered polls/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 1.4ms)
+
+

@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    expose:
+      - "3000"
+    dns: "8.8.8.8"
+    volumes:
+      - ".:/app"
+    env_file: .env
+    external_links:
+      - postgres:db
+    command: bash -c "bundle exec rake assets:precompile && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rails s"
+    networks:
+      - production
+    restart: always
+
+networks:
+  production:
+    external: true
+# Refer to: https://viky.co.in/2017/12/18/link-external-containers-using-docker-compose/
+# Useful commands:
+# docker network create production
+# docker network connect production postgres

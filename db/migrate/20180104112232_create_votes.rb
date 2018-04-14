@@ -4,7 +4,7 @@ class CreateVotes < ActiveRecord::Migration[5.1]
       t.references :user, foreign_key: true
       t.references :vote_option, foreign_key: true
       t.timestamps
-      add_index :votes, [:vote_option_id, :user_id], unique: true
     end
+    add_index :votes, [:vote_option_id, :user_id], unique: true
   end
 end

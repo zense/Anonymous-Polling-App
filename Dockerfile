@@ -14,6 +14,7 @@ COPY Gemfile.lock /app/
 ENV RAILS_ENV=development
 ENV NODE_ENV=development
 
+RUN bundle config mirror.https://rubygems.org http://172.17.0.1:9292
 RUN bundle install --jobs 8
 
 COPY package.json /app/
